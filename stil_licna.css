@@ -1,0 +1,106 @@
+body{
+	margin: 0;
+	display: flex;
+}
+
+#levo{
+	width: 20%;
+	height: 250px;
+	
+	background-color: #1B2631;
+	
+	border-top-right-radius: 10%;
+	
+	position: fixed;
+	margin-left: 0%;
+	margin-top: 15%;
+	overflow: auto;
+}
+
+#opcije{
+	width: 80%;
+	margin-top: 80px;
+	margin-left: 20px;
+}
+
+button{
+	width: 100%;
+	
+	margin-top: 10px;
+	
+	text-align: center;
+	font-weight: bold;
+	font-size: 15;
+	color: #1B2631;
+	
+}
+
+@font-face{
+	font-family: centar_font;
+	src: url(Thempo.ttf);
+}
+
+#centar{
+	width: 50%;
+	height: 500px;
+	
+	text-align: center;
+	font-family: centar_font;
+	color: #1B2631;
+	
+	border-top-left-radius: 25%;
+	border-top-right-radius: 25%;
+	
+	padding-top: 10px;
+	
+	background-color: #D0D3D4;
+	margin-top: 5%;
+	margin-left: 20%;
+	
+}
+
+#deo_1{
+	
+	width: 300px;
+	
+	text-align: left;
+	font-weight: bold;
+	font-size: 20;
+	margin-top: 20px;
+	
+	padding-left: 20px;
+}
+
+input{
+	width: 40%;
+	vertical-align: middle;
+}
+
+#deo_2{
+	text-align: left;
+	margin-top: 50px;
+	
+	padding-left: 20px;
+}
+
+#deo_2 ol{
+	font-size: 10;
+	margin-left: 20px;
+}
+
+#desno{
+	width: 30%;
+	height: 250px;
+	background-color: orange;
+	
+	border-top-left-radius: 10%;
+	
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 20px;
+	
+	position: fixed;
+	margin-top: 15%;
+	margin-left: 70%;
+}

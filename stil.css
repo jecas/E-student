@@ -1,0 +1,58 @@
+
+#obavestenje{
+	width: 500px;
+	height: 240px;
+	
+	/*background-color: #186A3B;*/
+	background-color: #D0D3D4;
+	border: 1px solid black;
+	text-align: center;
+	
+	padding: 10px 10px 5px 10px;
+
+	position: absolute;
+	margin-left: 500px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: 500px;
+}
+
+#prijava{
+	width: 250px;
+	height: 150px;
+	
+	background-color: #D0D3D4;
+	
+	position: absolute;
+	margin-top: 400px;
+	margin-left: 625px;
+}
+
+p{
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	
+	padding-left: 2px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#student{
+	background-color: #1B2631;
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 5px;
+}
+
+.unos{
+	width: 225px;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+
+#submit{
+	margin-top: 14px;
+	margin-left: 90px;
+}

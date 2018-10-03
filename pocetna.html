@@ -1,0 +1,82 @@
+<!-- DOCTYPE html -->
+
+<html>
+
+	<head>
+		<title> Dobrodošli </title>
+		<meta charset = "utf-8">
+		<meta name = "author" content = "Jelena Smiljkovic">
+		<link rel = "stylesheet" href = "stil.css">
+		<script type = 'text/javascript' src='jquery-3.1.1.min.js'> </script>
+		
+		<script>
+			$(document).ready(function(){
+			
+				//kada kliknemo na dugme submit
+				$("form").submit(function(){
+					//ucitavamo broj indeksa
+					var indeks = $("input[name = 'indeks']").val();
+					
+					//proveravamo da li unet broj indeksa
+					if(indeks.length == 0){
+						window.alert("Niste uneli broj indeksa.");
+						return false;
+					}
+					
+					//proveravamo da li je uneti indeks u odg. obliku
+					var pos = indeks.search("/");
+					if(pos != 4){
+						window.alert("Broj indeksa nije u odgovarajucem obliku");
+						return false;
+					}
+					
+					//ucitavamo lozinku
+					var lozinka = $("input[name = 'lozinka']").val();
+					
+					//proveravamo da li je uneta lozinka
+					if(lozinka.length == 0){
+						window.alert("Niste uneli lozinku.");
+						return false;
+					}
+					
+					//ako je sve u redu, prosledjujemo ucitane podatke
+					return true;
+				});
+			});
+		</script> 
+	</head>
+	
+	<body>
+		<div class = container>
+			<div id = obavestenje>
+				Da biste se prijavili, unesite svoj broj indeksa u obliku broj/godina i
+				lozinku koju koristite. Kodni raspored mora biti postavljen na englesku 
+				latinicu.
+				<br><br>
+				Ako nemate nalog, registrujte se klikom na <a href = "registracija.html"><b>
+				registracija</b></a>.
+				<br><br>
+				U slučaju problema sa prijavljivanjem, pošaljite poruku na
+				<a href = "mailto:jelena_s7@yahoo.com" style = "color: blue"><b>
+				jelena_s7@yahoo.com</b></a>. 
+				Poruka treba da sadrži broj indeksa i tekst greške.
+				<br><br>
+				Studenti koji su prešli na novi skup studijskih programa, kao i studenti 
+				diplomskih i doktorskih studija koji ne mogu da se prijave treba da 
+				pošalju stari i novi broj indeksa na navedenu adresu.
+			</div>
+			
+			<div id = prijava>
+				<form action = "licna.php", method = 'GET'>
+					<p id = "student"> Student </p>
+					<p>Indeks:</p>
+					<input type = "text" name = "indeks" class = "unos">
+					<p>Lozinka:</p>
+					<input type = "password" name = "lozinka" class = "unos">
+					<br>
+					<input type = "submit" name = "submit" id = "submit" value = "Prijavite se">
+				</form>
+			</div> 
+		</div> 
+	</body>
+</html>

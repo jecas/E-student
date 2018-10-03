@@ -1,0 +1,44 @@
+div{
+	width: 250px;
+	height: 500px;
+	
+	background-color: #D0D3D4;
+	
+	margin-left: 42%;
+	margin-top: 50px;
+}
+
+p{
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	
+	padding-left: 5px;
+	padding-top: 5px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.unos{
+	width: 225px;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+
+input:required{
+	border-color: #1B2631 !important;
+}
+
+#submit{
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	
+	margin-top: 14px;
+	margin-left: 30%;
+}
+
+#submit:hover{
+	color: red;
+}

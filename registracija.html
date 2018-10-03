@@ -1,0 +1,96 @@
+<!-- DOCTYPE html -->
+
+<html>
+	<head>
+		<title> Registracija </title>
+		<meta charset = "utf-8">
+		<meta name = "author" content = "Jelena Smiljkovic">
+		<link rel = "stylesheet" href = "stil_registracija.css">
+		<script type = 'text/javascript' src='jquery-3.1.1.min.js'> </script>
+		
+		<script>
+			//postavljamo odg. poruku u slucaju da korisnik ne popuni neko od obaveznih polja
+			document.addEventListener("DOMContentLoaded", function() {
+				var elementi = document.getElementsByTagName("input");
+				for (var i = 0; i < elementi.length; i++) {
+					elementi[i].oninvalid = function(e) {
+						e.target.setCustomValidity("");
+						if (!e.target.validity.valid) 
+							e.target.setCustomValidity("Ovo polje ne može da ostane prazno");
+					};
+					elementi[i].oninput = function(e) {
+						e.target.setCustomValidity("");
+					};
+				}
+			})
+		
+			$(document).ready(function(){
+			
+				//kada kliknemo na dugme submit
+				$("form").submit(function(){
+					//ucitavamo ime
+					var ime = $("input[name = 'ime']").val();
+					
+					//ucitavamo prezime
+					var prezime = $("input[name = 'prezime']").val();
+					
+					//ucitavamo broj indeksa
+					var indeks = $("input[name = 'indeks']").val();
+					
+					//ucitavamo lozinku
+					var lozinka = $("input[name = 'lozinka']").val();
+					
+					//ucitavamo potvrdu lozinke
+					var potvrdjena_lozinka = $("input[name = 'lozinka_again']").val();
+					
+					//proveravamo da li se lozinke poklapaju
+					if(lozinka !== potvrdjena_lozinka){
+						window.alert("Unete lozinke se ne poklapaju");
+						return false;
+					}
+					
+					//ucitavamo datum upisa
+					//var upis = $("input[name = 'datum_upisa']").val();
+					
+					//ucitavamo datum rodjenja
+					//var rodjenje = $("input[name = 'datum_rodjenja']").val();
+					
+					//ucitavamo mesto rodjenja
+					//var mesto = $("input[name = 'mesto_rodjenja']").val();
+					
+					//ako je sve u redu, prosledjujemo ucitane podatke
+					return true;
+				});
+			});
+	
+		</script>
+	</head>
+	
+	<body>
+		<form action = "registruj_se.php" method = "GET">
+			<div>
+				<p> Ime </p>
+				<input type = "text" name = "ime" class = "unos" required />
+				<p> Prezime </p>
+				<input type = "text" name = "prezime" class = "unos" required />
+				<p> Indeks </p>
+				<input type = "text" name = "indeks" class = "unos" required 
+					placeholder = "bbbb/gggg"/>
+				<p> Lozinka </p>
+				<input type = "password" name = "lozinka" class = "unos" required />
+				<p> Potvrda lozinke </p>
+				<input type = "password" name = "lozinka_again" class = "unos" required />
+				<p> Datum upisa </p>
+				<input type = "datetime" name = "datum_upisa" class = "unos" 
+					placeholder = "gggg-mm-dd"/>
+				<p> Datum rođenja </p>
+				<input type = "datetime" name = "datum_rodjenja" class = "unos" 
+					placeholder = "gggg-mm-dd"/>
+				<p> Mesto rođenja </p>
+				<input type = "text" name = "mesto_rodjenja" class = "unos" />
+				<br><br>
+				<input type = "submit" value = "Registruj se" id = "submit" />
+			</div>
+		</form>
+	</body>
+</html>
