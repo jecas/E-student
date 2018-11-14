@@ -41,16 +41,10 @@
 					
 	//izvrsavamo upit
 	if($veza->query($upit) === TRUE){
-		//echo '<script type = "text/javascript"> alert("Uspesno ste dodali ispit.");';
-		//echo 'window.location = "licna.php";';
-		//echo '</script>';
 		echo 'Uspešno ste dodali ispit.';
 		echo '<br><a href = "javascript:history.back()">Vrati se nazad </a>';
 	}
 	else{
-		//echo '<script type = "text/javascript"> alert("Ispit vec postoji u bazi.");';
-		//echo 'window.location = "licna.php";';
-		//echo '</script>';
 		echo 'Ispit već postoji u bazi.';
 		echo '<br><a href = "javascript:history.back()">Vrati se nazad </a>';
 	}
