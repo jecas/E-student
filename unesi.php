@@ -42,11 +42,13 @@
 	//izvrsavamo upit
 	if($veza->query($upit) === TRUE){
 		echo 'Uspešno ste dodali ispit.';
-		echo '<br><a href = "javascript:history.back()">Vrati se nazad </a>';
+		$url = htmlspecialchars($_SERVER['HTTP_REFERER']);
+		echo "<br><a href='$url'> Vrati se nazad </a>"; 
 	}
 	else{
 		echo 'Ispit već postoji u bazi.';
-		echo '<br><a href = "javascript:history.back()">Vrati se nazad </a>';
+		$url = htmlspecialchars($_SERVER['HTTP_REFERER']);
+		echo "<br><a href='$url'> Vrati se nazad </a>"; 
 	}
 	//raskidamo konekciju
 	mysqli_close($veza);
