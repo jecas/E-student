@@ -94,8 +94,12 @@
 				<button type = "button" onclick = "prikazi_formu(2)">
 					Položeni ispiti </button>
 				<br>
-				<button type = "button" action = "action" 
-					onclick = "window.history.go(-1); return false;"> Odjavljivanje </button>
+				<button type = "button" action = "action" id = "odjava"> Odjavljivanje </button>
+				<script type = "text/javascript">
+					document.getElementById("odjava").onclick = function(){
+						location.href = "pocetna.html";
+					};
+				</script>
 			</div>
 		</div>
 		
